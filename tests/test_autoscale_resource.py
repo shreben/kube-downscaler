@@ -230,6 +230,7 @@ def test_downscale_stack_deployment_ignored():
     resource.update.assert_not_called()
     assert ORIGINAL_REPLICAS_ANNOTATION not in resource.annotations
 
+
 def test_downscale_replicas_not_zero(resource):
     resource.annotations = {EXCLUDE_ANNOTATION: 'false'}
     resource.replicas = 3
